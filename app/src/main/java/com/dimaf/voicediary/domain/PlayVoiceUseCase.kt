@@ -1,4 +1,7 @@
 package com.dimaf.voicediary.domain
 
-class PlayVoiceUseCase {
+class PlayVoiceUseCase (private val repository: VoiceRepository) {
+    fun playVoice(voice: Voice) {
+        repository.playVoice(voice)
+    }
 }

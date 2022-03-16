@@ -1,4 +1,9 @@
 package com.dimaf.voicediary.domain
 
-class GetVoiceListUseCase {
+import androidx.lifecycle.LiveData
+
+class GetVoiceListUseCase (private val repository: VoiceRepository) {
+    fun getVoiceList() : LiveData<List<Voice>> {
+        return repository.getVoiceList()
+    }
 }
