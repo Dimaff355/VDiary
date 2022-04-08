@@ -1,9 +1,12 @@
 package com.dimaf.voicediary.domain
 
-import java.time.LocalDateTime
 
 data class Voice (
-    val id : Int,
-    val date : LocalDateTime,
+    val id : Int = UNDEFINED_ID,
+    val date : String,
     val fileUrl : String
-        )
+        ) {
+    companion object {
+        const val UNDEFINED_ID = 0
+    }
+}
